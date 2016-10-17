@@ -55,27 +55,18 @@ function latex_generate_input_form() {
     '#required' => TRUE,
     '#size' => 60,
   );
-  $form['date_assigned'] = array(
-    '#title' => t('Date assigned'),
-    '#type' => 'date_popup',
+  $form['superaddress'] = array(
+    '#title' => t('Thesis supervisor address'),
+    '#type' => 'textarea',
     '#required' => TRUE,
-    '#default_value' => date("d.m.Y"),
-    '#date_type' => DATE_DATETIME,
-    '#date_timezone' => date_default_timezone(),
-    '#date_format' => 'd.m.Y',
-    '#date_increment' => 1,
-    '#date_year_range' => '-5:+3',
-  );
-  $form['date_due'] = array(
-    '#title' => t('Date due'),
-    '#type' => 'date_popup',
-    '#required' => TRUE,
-    '#default_value' => date("d.m.Y"),
-    '#date_type' => DATE_DATETIME,
-    '#date_timezone' => date_default_timezone(),
-    '#date_format' => 'd.m.Y',
-    '#date_increment' => 1,
-    '#date_year_range' => '-5:+3',
+    );
+
+  $form['textdate'] = array(
+  '#markup' => '<p><label style="display:inline">Datum zadání</label>: 20.10.2015</p><p><label style="display:inline">Datum odevzdání</label>: 08.07.2016</p><script>
+    var editor = new wysihtml5.Editor("edit-literature", {
+        parserRules:  wysihtml5ParserRules 
+    });
+</script>'
   );
 
   // Set default values if any.

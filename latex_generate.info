@@ -2,9 +2,11 @@ name = LaTeX generate
 description = Generates LaTeX templates based on user input.
 package = LaTeX
 core = 7.x
-version = 7.x-1.x
+version = 7.x-1.0
 
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = transliteration
+scripts[] = includes/rules.js
+scripts[] = includes/w.js

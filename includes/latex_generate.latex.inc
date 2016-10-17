@@ -21,7 +21,13 @@ function latex_generate_generate($variables) {
 
   // Handle multiline items.
   $variables = latex_generate_break_lines($variables, 'outline');
+
+  $uprav = $variables['literature'];
+  $uprav = str_replace("<i>", "\\textit{", $uprav);
+  $uprav = str_replace("</i>", "}", $uprav);
+  $variables['literature'] = $uprav;
   $variables = latex_generate_break_lines($variables, 'literature');
+  $variables['superaddress'] = str_replace("\r\n", "\\\\\\ \n ", $variables['superaddress']);
 
   $patterns = array();
   $replacements = array();
