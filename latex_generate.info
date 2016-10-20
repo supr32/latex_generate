@@ -4,6 +4,8 @@ package = LaTeX
 core = 7.x
 version = 7.x-1.0
 
+configure = admin/config/content/latex_generate
+
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup

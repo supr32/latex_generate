@@ -12,8 +12,7 @@ function latex_generate_input_form() {
   $form = array();
 
   $form['for'] = array(
-    // @ToDo This title is not helpful.
-    '#title' => t('For'),
+    '#title' => t('Student'),
     '#type' => 'textfield',
     '#required' => TRUE,
     '#size' => 60,

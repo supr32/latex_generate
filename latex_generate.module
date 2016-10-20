@@ -8,34 +8,46 @@
 /**
  * Implements hook_permission().
  */
-function latex_generate_permission() {
-  $return = array();
+function latex_generate_permission()
+{
+    $return = array();
 
-  $return['latex generate'] = array(
-    'title' => t('Generate LaTeX template'),
-    'description' => t('Allow user to use LaTeX template generation form.'),
-  );
+    $return['latex generate'] = array(
+        'title' => t('Generate LaTeX template'),
+        'description' => t('Allow user to use LaTeX template generation form.'),
+    );
 
-  return $return;
+    return $return;
 }
 
 /**
  * Implements hook_menu().
  */
-function latex_generate_menu() {
-  $items = array();
+function latex_generate_menu()
+{
+    $items = array();
 
-  $items['latex-generate'] = array(
-    'title' => 'Generate template',
-    'description' => 'Data input.',
-    'access callback' => 'user_access',
-    'access arguments' => array('latex generate'),
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('latex_generate_input_form'),
-    'type' => MENU_CALLBACK,
-    'file' => 'latex_generate.input.inc',
-    'file path' => drupal_get_path('module', 'latex_generate') . '/includes',
-  );
+    $items['latex-generate'] = array(
+        'title' => 'Generate template',
+        'description' => 'Data input.',
+        'access callback' => 'user_access',
+        'access arguments' => array('latex generate'),
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('latex_generate_input_form'),
+        'type' => MENU_CALLBACK,
+        'file' => 'latex_generate.input.inc',
+        'file path' => drupal_get_path('module', 'latex_generate') . '/includes',
+    );
 
-  return $items;
+    $items['admin/config/content/latex_generate'] = array(
+        'title' => 'Generate latex template',
+        'description' => 'Configuration of generating latex templates',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('latex_generate_admin_form'),
+        'access arguments' => array('access administration pages'),
+        'file' => 'latex_generate.admin.inc',
+        'file path' => drupal_get_path('module', 'latex_generate') . '/includes',
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
 }
