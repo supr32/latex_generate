@@ -8,6 +8,7 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{tabularx}
 \usepackage{parskip}
+\usepackage{enumitem}
 
 \usepackage[pdftex]{hyperref}
 
@@ -24,7 +25,7 @@
 \end{center}
 
 \vspace{5mm}
-Katedra softwarového inženýrství \hfill     Akademický rok 2016/2017\\[2cm]
+Katedra softwarového inženýrství \hfill     Akademický rok @@|years|@@\\[2cm]
 
 \begin{center}
   \begin{huge}
@@ -35,19 +36,20 @@ Katedra softwarového inženýrství \hfill     Akademický rok 2016/2017\\[2cm]
 
 
 \begin{tabularx}{\textwidth}{rl}
-\textbf{Pro:} & \textbf{@@@|for|@@@}\\[0.3cm]
+\textbf{Student:} & \textbf{@@@|for|@@@}\\[0.3cm]
+\textbf{Studijní program:} & \textbf{Aplikace přírodních věd}\\[0.3cm]
 \textbf{Obor:} & \textbf{Aplikace softwarového inženýrství}\\[0.3cm]
 \textbf{Název práce česky:} & \textbf{@@@|title_cz|@@@}\\[0.3cm]
 \textbf{Název práce anglicky:} & \textbf{@@@|title_en|@@@}
 \end{tabularx}
 \\[4cm]
 
-\textbf{Osnova}
+\textbf{Pokyny pro vypracování}
 
 \vspace{5pt}
-\begin{itemize}
+\begin{enumerate}
 @@@\item |outline|@@@
-\end{itemize}
+\end{enumerate}
 
 \newpage
 \pagestyle{empty}
@@ -55,7 +57,7 @@ Katedra softwarového inženýrství \hfill     Akademický rok 2016/2017\\[2cm]
 \textbf{Doporučená literatura:}
 
 \leftmargini=13pt
-\begin{enumerate}
+\begin{enumerate}[label=\lbrack\arabic*\rbrack]
 % použijte http://generator.citace.com (lze dohledat knihy dle ISBN)
 @@@\item |literature|@@@
 \end{enumerate}
@@ -70,6 +72,12 @@ Katedra softwarového inženýrství \hfill     Akademický rok 2016/2017\\[2cm]
 %Pohraniční 1288/1\\
 %405 01 ~ Děčín
 \par
+\textbf{Jméno a pracoviště konzultanta:}
+
+\textbf{@@@|konzultant|@@@} \\
+@@@|konzltant_addr|@@@
+\par
+\vfill
 \hfill
 \begin{minipage}{0.3\textwidth}
 
@@ -81,10 +89,11 @@ Katedra softwarového inženýrství \hfill     Akademický rok 2016/2017\\[2cm]
 \end{minipage}
 
 \vfill
-\textbf{Datum zadání bakalářské práce:} 20.10.2015 %@@@|date_assigned|@@@
+\textbf{Datum zadání bakalářské práce:} @@@|date_assigned|@@@
 
-\textbf{Termín odevzdání bakalářské práce:} 08.07.2016 \\[4cm] %@@@|date_due|@@@ \\[4cm]
+\textbf{Termín odevzdání bakalářské práce:} @@@|date_due|@@@
 
+Doba platnosti zadání je dva roky od data zadání.\\[4cm]
 
 \begin{minipage}{0.3\textwidth}
   \begin{center}\dotfill\\
